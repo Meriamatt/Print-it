@@ -16,6 +16,7 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ];
+
 let changeSlide = document.getElementsByClassName("banner-img")[0];
 let changeText = document.getElementsByClassName("tag-line")[0];
 let nbrElement = slides.length;
@@ -24,7 +25,7 @@ let arrowLeft = document.querySelector(".arrow_left");
 console.log(arrowLeft);
 let arrowRight = document.querySelector(".arrow_right");
 console.log(arrowRight);
-
+let selectedBullet =document.getElementsByClassName("")
 arrowRight.addEventListener("click", function(){ 
 	//console.log (index);
 	//console.log (nbrElement);
@@ -51,7 +52,7 @@ arrowLeft.addEventListener("click", function(){
 		changeText.innerHTML = slides[index].tagLine;
 	 console.log("click left"); 
 	});
-	
+
 
 
 
