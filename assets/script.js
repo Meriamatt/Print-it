@@ -17,3 +17,11 @@ const slides = [
 	}
 ];
 
+
+let arrowLeft = document.querySelector(".arrow_left");
+console.log(arrowLeft);
+let arrowRight = document.querySelector(".arrow_right");
+console.log(arrowRight);
+arrowRight.addEventListener("click", function(){ console.log("Hello World!"); });
+arrowLeft.addEventListener("click", function(){ console.log("Hello World!"); });
+
