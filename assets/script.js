@@ -29,6 +29,7 @@ console.log(arrowRight);
 let bullets = document.getElementsByClassName("dot");
 
 arrowRight.addEventListener("click", function () {
+	bullets[index].classList.remove("dot_selected");
   if (index < nbrElement - 1) {
     index++;
   } else {
@@ -37,17 +38,21 @@ arrowRight.addEventListener("click", function () {
   changeSlide.src = "./assets/images/slideshow/" + slides[index].image;
   changeText.innerHTML = slides[index].tagLine;
   bullets[index].classList.add("dot_selected");
-  bullets[index - 1].classList.remove("dot_selected");
+  
   console.log("click right");
 
   console.log("selected bullet" + index);
 });
 arrowLeft.addEventListener("click", function () {
-  bullets[index].classList.remove("dot_selected");
+	bullets[index].classList.remove("dot_selected");
+  
   if (index < nbrElement && index > 0) {
     index--;
+	
   } else {
+	
     index = nbrElement - 1;
+	
   }
   changeSlide.src = "./assets/images/slideshow/" + slides[index].image;
   changeText.innerHTML = slides[index].tagLine;
